@@ -1,0 +1,54 @@
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hertz-UTS by Zhenghao Fang 12991701</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/vue.min.js"></script>
+</head>
+<body>
+	<div id="root">
+		<header>
+			<div class="inner">
+				<a href="car_rental_center.html" id="to_cart">Car Reservation</a>
+			</div>
+		</header>
+		<div id="car_list">
+			<ul>
+				<li class="car" v-for="car in cars">
+					<div class="img_box">
+						<img v-bind:src="'images/'+car.model+'.jpg'">
+					</div>
+					<div class="info">
+						<h3>{{car.model}}</h3>
+						<dl>
+							<dt>Mileage</dt>
+							<dd>{{car.mileage.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}}</dd>
+							<dt>Seats</dt>
+							<dd>{{car.seats}}</dd>
+							<dt>Fuel type</dt>
+							<dd>{{car.fuel_type}}</dd>
+							<dt>Model Year</dt>
+							<dd>{{car.model_year}}</dd>
+							<dt class="available">Availability</dt>
+							<dd class="available">{{car.availability}}</dd>
+							<dt class="price">Price per day</dt>
+							<dd class="price">{{car.price_per_day}}</dd>
+						</dl>
+						<a class="rent_button" :class="{active: car.availability=='True'}" :data-id="car.id" v-on:click="addToCart(car)">Rent this car</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- warning box -->
+	<div id="warning">
+		<p>
+			<strong></strong>
+		</p>
+	</div>
+
+	<script src="js/index.js"></script>
+</body>
+</html>

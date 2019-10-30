@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+}
+
+header {
+  background-color: #5EFCE8;
+}
+
+.inner {
+  position: relative;
+  width: 90%;
+  height: 60px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.inner h1 {
+  color: #fff;
+  line-height: 60px;
+  font-size: 24px;
+}
+
+#car_table {
+  width: 800px;
+  margin: 0 auto;
+  padding: 40px 0 0 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.pic {
+  width: 160px;
+}
+
+.pic img {
+  width: 100%;
+}
+
+th {
+  height: 20px;
+  margin: 10px 0;
+  color: #182878;
+  border-right: 1px #d6d6d6 solid;
+}
+
+th:nth-child(5) {
+  border-right: none;
+}
+
+td {
+  text-align: center;
+}
+
+input[type=number] {
+  width: 40px;
+  padding: 4px 6px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 2px #6cbcf3 solid;
+  transition: all 0.3s ease;
+}
+
+input[type=number]:focus {
+  border: 2px #efcd4f solid;
+}
+
+.action {
+  position: relative;
+}
+
+.delete {
+  color: #fff;
+  padding: 4px 6px;
+  background: #6dbcf3;
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+.delete:hover {
+  background: #69d3ef;
+}
+
+.delete:active {
+  box-shadow: inset 0 0 7px 0px rgba(0, 0, 0, 0.2);
+  color: #182878;
+}
+
+.delete_box {
+  position: absolute;
+  right: -220px;
+  top: 32px;
+  z-index: 5;
+  width: 220px;
+  padding: 12px 10px;
+  background-color: #F6416B;
+  border-radius: 5px;
+}
+
+.delete_box p {
+  height: 24px;
+  line-height: 13px;
+  font-size: 13px;
+  text-align: center;
+  color: #792f2f;
+}
+
+.delete_box a {
+  background: #fdfcf7;
+  color: #f18787;
+  padding: 4px 12px;
+  margin: 4px 6px;
+  border-radius: 3px;
+}
+
+.delete_box a:active {
+  background: #ead9d9;
+}
+
+.delete_box i {
+  position: absolute;
+  left: -18px;
+  top: 22px;
+  z-index: 2;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 9px 9px 9px;
+  border-color: transparent #FFF6B7 transparent transparent;
+}
+
+#no_cars {
+  padding: 80px 0;
+  text-align: center;
+}
+
+#no_cars p {
+  color: #ccc;
+  font-size: 30px;
+}
+
+#no_cars i {
+  padding: 0 6px;
+}
+
+#price {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 0;
+  text-align: center;
+  border-top: 1px #d6d6d6 solid;
+}
+
+#price h4 {
+  color: #848484;
+}
+
+#price strong {
+  padding: 0 10px;
+  font-size: 28px;
+  color: #f18786;
+}
+
+#purchase {
+  display: block;
+  margin: 20px auto;
+  width: 200px;
+  padding: 10px 20px;
+  color: #fff;
+  text-align: center;
+  background: #f18787;
+  border-radius: 5px;
+}
+
+#purchase:hover {
+  background: #ff9494;
+}
+
+#purchase:active {
+  background: #d87272;
+}
+
+#clearCart {
+  display: block;
+  margin: 30px auto;
+  width: 80px;
+  padding: 10px 20px;
+  color: #fff;
+  text-align: center;
+  background: #6cbcf3;
+  border-radius: 5px;
+}
+
+#clearCart:hover {
+  background: #69d3ef;
+}
+
+#clearCart:active {
+  box-shadow: inset 0 0 7px 0px rgba(0, 0, 0, 0.2);
+  color: #182878;
+}
+#warning {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  margin: 0 0 0 -220px;
+  width: 440px;
+  height: 40px;
+  text-align: center;
+  background-color: #FFF6B7;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+#warning.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(10px);
+}
+
+#warning p {
+  color: #fff;
+  height: 45px;
+  line-height: 40px;
+  text-shadow: 0 0 2px #F6416C;
+}
+#warning p i {
+  margin: 0 3px;
+}
+
+#warning p strong {
+  font-weight: normal;
+}
+
+.deletebox-enter-active,
+.deletebox-leave-active {
+  transition: all 0.3s ease;
+}
+
+.deletebox-enter, .deletebox-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.single_car {
+  transition: all 0.3s ease;
+}
+
+.change_list-move {
+  transition: transform 0.3s;
+}
+
+.change_list-enter,
+.change_list-leave-to {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
